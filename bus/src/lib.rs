@@ -5,6 +5,7 @@ extern crate alloc;
 
 mod argument;
 mod builder;
+mod direction;
 mod evaluation;
 mod leaf;
 mod multilinear;
@@ -17,8 +18,9 @@ pub use builder::{
     BusActivation, BusInteractionBuilder, BusInteractionRecorder, BusSymbolicBuilder, RecordToken,
     SymbolicBusInteraction,
 };
+pub use direction::BusDirection;
 pub use evaluation::{BusEvaluation, BusEvaluationError};
-pub use leaf::{BusDirection, BusLeafDeclaration, BusLeafError, BusLeaves, BusSelector};
+pub use leaf::{BusLeafDeclaration, BusLeafError, BusLeaves, BusSelector};
 pub use plan::{
     BusBlock, BusBlockOwner, BusDomain, BusExpressionLocation, BusPlan, BusPlanError, BusPlanInput,
     BusSecurityGeometry, BusTerminalShare, BusTupleSlot, UnsupportedBusAccess,
